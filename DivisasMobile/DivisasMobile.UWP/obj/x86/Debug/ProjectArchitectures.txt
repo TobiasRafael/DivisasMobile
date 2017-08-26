@@ -1,0 +1,2 @@
+C:\Users\tobia\Source\Repos\DivisasMobile\DivisasMobile\DivisasMobile.UWP\DivisasMobile.UWP.csproj;x86
+C:\Users\tobia\Source\Repos\DivisasMobile\DivisasMobile\DivisasMobile\DivisasMobile.csproj;neutral

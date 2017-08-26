@@ -2,10 +2,68 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DivisasMobile"
-             x:Class="DivisasMobile.MainPage">
+             x:Class="DivisasMobile.MainPage"
+             Title="Divisas"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout Padding="10">
+        <Label
+            Text="Pesos:">
+        </Label>
+        <Entry
+            Text="{Binding Pesos, Mode=TwoWay}"
+    Placeholder="Ingrese el valor en Pesos (DOP)"
+    HorizontalTextAlignment="End"
+    TextColor="Black"
+            Keyboard="Numeric">
+        </Entry>
+        <Button
+            Command="{Binding ConvertCommand}"
+            Text="Convertir"
+           BackgroundColor="Navy" 
+            TextColor="White"
+            HeightRequest="40"
+            BorderRadius="20">
+        </Button>
+
+
+        <Label
+            Text="Dolares:">
+        </Label>
+        <Entry
+            
+            Text="{Binding Dollars, Mode=TwoWay, StringFormat='${0:N2}'}"
+    Placeholder="Ingrese el valor en Dolares (USD)"
+    HorizontalTextAlignment="End"
+    TextColor="Black"
+            IsEnabled="False">
+        </Entry>
+
+        <Label
+            Text="Euros:">
+        </Label>
+        <Entry
+            Text="{Binding Euros, Mode=TwoWay, StringFormat='€{0:N2}' }"
+    Placeholder="Ingrese el valor en Euros (EUR)"
+    HorizontalTextAlignment="End"
+    TextColor="Black"
+            IsEnabled="False">
+        </Entry>
+
+        <Label
+            Text="Libras:">
+        </Label>
+        <Entry
+             Text="{Binding Pounds, Mode=TwoWay, StringFormat='£{0:N2}'}" 
+    Placeholder="Ingrese el valor en Libras (GBP)"
+    HorizontalTextAlignment="End"
+    TextColor="Black"
+            IsEnabled="False">
+        </Entry>
+
+
+
+
+    </StackLayout>
 
 </ContentPage>
