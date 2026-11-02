@@ -1,0 +1,14 @@
+# Normalización de fin de línea
+* text=auto
+
+# GitHub Linguist: excluir código generado/de terceros de las estadísticas de lenguajes
+**/bin/** linguist-generated
+**/obj/** linguist-generated
+packages/** linguist-vendored
+*.Designer.cs linguist-generated
+
+# Binarios
+*.png binary
+*.jpg binary
+*.dll binary
+*.pfx binary
